@@ -11,7 +11,7 @@ services:
 
   backend:
     build:
-      context: ./Backend
+      context: ./Backend/
     container_name: backend_bookstore
     ports:
       - "3000:3000"
@@ -21,10 +21,10 @@ services:
 
   frontend:
     build:
-      context: ./Frontend
+      context: ./Frontend/
     container_name: frontend_bookstore
     ports:
-      - "5174:5173"
+      - "5173:5173"
 
 networks:
   my-network:
