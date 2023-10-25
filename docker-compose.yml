@@ -1,8 +1,8 @@
 version: "3.8"
 services:
   mongo:
-    image: mongo
-    container_name: myMongo
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    container_name: mongo
     restart: unless-stopped
     ports:
       - "27027:27017"
@@ -11,16 +11,17 @@ services:
 
   backend:
     build:
-      context: ./Backend/ 
+      context: ./Backend
     container_name: backend_bookstore
     ports:
       - "3000:3000"
     links:
       - mongo
 
+
   frontend:
     build:
-      context: ./Frontend/  
+      context: ./Frontend
     container_name: frontend_bookstore
     ports:
       - "5173:5173"
