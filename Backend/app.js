@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const morgan = require("morgan");
 const bookRoute = require("./routes/bookRoute");
-const authRoute = require("./routes/authRoute");
+// const authRoute = require("./routes/authRoute");
 const userRoute = require("./routes/userRoute");
 const walletRoute = require("./routes/walletRoute");
 const reviewRatingRoute = require("./routes/reviewRatingRoute");
@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("combined", { stream: accessLogStream }));
 app.use("/book", bookRoute);
-app.use("/auth", authRoute);
+// app.use("/auth", authRoute);
 app.use("/user", userRoute);
 app.use("/wallet", walletRoute);
 app.use("/feedback", reviewRatingRoute);
