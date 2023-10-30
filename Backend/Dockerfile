@@ -5,4 +5,4 @@ RUN npm install
 COPY . .
 # CMD [ "npm", "start" ]
 EXPOSE 3000
-CMD [ "node", "app.js" ]
+CMD [ "npm", "start" ]
