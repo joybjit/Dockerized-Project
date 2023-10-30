@@ -17,9 +17,9 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/file/get/${userData.id}.jpg`)
+      .get(`http://localhost:3000/file/get/${userData.id}.jpg`)
       .then((res) =>
-        setPic(`http://localhost:8000/file/get/${userData.id}.jpg`)
+        setPic(`http://localhost:3000/file/get/${userData.id}.jpg`)
       )
       .catch((err) => setPic(picture));
 
@@ -44,7 +44,7 @@ const Profile = () => {
     const formData = new FormData();
     formData.append("file_to_upload", file[0]);
     axios
-      .post(`http://localhost:8000/file/upload-file/${userData.id}`, formData)
+      .post(`http://localhost:3000/file/upload-file/${userData.id}`, formData)
       .then((res) => {
         // console.log(res.data.data.path);
         // const str = res.data.data.path.split("\\")[1];

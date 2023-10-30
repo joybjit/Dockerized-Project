@@ -54,7 +54,7 @@ app.use((req, res) => {
   return res.status(400).send({ message: "Bad Request" });
 });
 databaseConnection(() => {
-  app.listen(8000, () => {
-    console.log("Server is running on 8000 port");
+  app.listen(3000, () => {
+    console.log("Server is running on 3000 port");
   });
 });

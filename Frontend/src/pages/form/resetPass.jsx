@@ -13,7 +13,7 @@ const ResetPassword = () => {
   const [err, setErr] = useState("");
   useEffect(() => {
     axios
-      .post("http://localhost:8000/auth/reset-request", { token, userId })
+      .post("http://localhost:3000/auth/reset-request", { token, userId })
       .then((res) => {})
       .catch((err) => {
         navigate("/invalid-token");
